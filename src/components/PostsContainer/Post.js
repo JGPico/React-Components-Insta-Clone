@@ -13,22 +13,22 @@ const Post = props => {
   return (
     <div className="post-border">
       <PostHeader
-        username={props.post.username}
+        username={props.dataProps.username}
         thumbnailUrl={
-          props.post.thumbnailUrl
+          props.dataProps.thumbnailUrl
         }
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={props.dataProps.imageUrl}
         />
       </div>
       <LikeSection />
       <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
+        postId={props.dataProps.imageUrl}
+        comments={props.dataProps.comments}
       />
     </div>
   );
